@@ -1,8 +1,50 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="main.css">
-  </head>
-  Hello, Magnesium!
-  <div> </div>
-  <div> </div>
+<!DOCTYPE html>
+
+<html lang="en">
+<link rel="stylesheet" href="main.css">
+
+<body>
+    <h1 style="color:blue;" align="center">
+        Project Magnesium
+    </h1>
+ 
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <br>
+ 
+    <button onClick="GFG_Fun()">
+        Move boxes!
+    </button>
+     
+    <h3 id="GFG" style="color: green;"></h3>
+
+    <!-- Script to block default right-click menu -->
+    <script>
+      document.oncontextmenu = rightClick;
+      function rightClick(clickEvent) {
+        clickEvent.preventDefault();
+      }
+    </script>
+
+    <!-- Script to move boxes to random locations -->
+    <script>  
+        let elm = document.getElementById("GFG");
+ 
+        function GFG_Fun() {
+            let x = Math.random() * 1500;
+            let y = Math.random() * 1500;
+            let box1 = document.getElementById('box1');
+            box1.style.position = "absolute";
+            box1.style.left = x + 'px';
+            box1.style.top = y + 'px';
+            x = Math.random() * 1500;
+            y = Math.random() * 1500;
+            let box2 = document.getElementById('box2');
+            box2.style.position = "absolute";
+            box2.style.left = x + 'px';
+            box2.style.top = y + 'px';
+        }
+    </script>
+</body>
+ 
 </html>
