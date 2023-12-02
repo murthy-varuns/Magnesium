@@ -1,1 +1,7 @@
 
+div {
+    width: 500px;
+    height: 200px;
+    border: 1px solid #2196F3;
+    background-color: #f7f7f7;
+  }
